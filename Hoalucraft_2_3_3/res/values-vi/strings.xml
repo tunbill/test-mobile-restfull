@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Công ty thủ công mỹ nghệ Hoa Lư</string>
+    <string name="action_settings">Cài đặt</string>
+    <string name="export_products">Sản phẩm xuất khẩu</string>
+    <string name="domestic_products">Sản phẩm nội địa</string>
+    <string name="lang_en">Tiếng Anh</string>
+    <string name="lang_vi">Tiếng Việt</string>
+    <string name="dummy_button">Danh mục sản phẩm</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="title_activity_product">Thông tin sản phẩm</string>
+    <string name="title_activity_product_detail">Thông tin sản phẩm</string>
+    <string name="title_activity_product_detail_name">Tên sản phẩm</string>
+    <string name="title_activity_product_list">Danh sách sản phẩm</string>
+    
+    <!-- Category -->
+    <string name="category_dialog_loading_title">Xin chờ &#8230;</string>
+    <string name="category_dialog_loading_message">Xin hãy đợi một lát. Chúng tôi đang tải dữ liệu từ máy chủ.</string>
+</resources>
