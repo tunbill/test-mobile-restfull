@@ -3,61 +3,51 @@
     android:layout_width="fill_parent"
     android:layout_height="wrap_content"
     android:padding="5dp" >
-
-    <LinearLayout
-        android:id="@+id/thumbnail"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_marginRight="5dp"
-        android:padding="3dp" >
-
-        <ImageView
-            android:id="@+id/product_item_image"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:contentDescription="@string/title_activity_product_detail_name" />
-    </LinearLayout>
-
+    <ImageView
+        android:id="@+id/product_item_image"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:contentDescription="@string/title_activity_product_detail_name" />
     <TextView
         android:id="@+id/product_item_name"
-        android:layout_width="wrap_content"
+        android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:layout_alignTop="@+id/thumbnail"
-        android:layout_toRightOf="@+id/thumbnail"
-        android:textColor="#040404"
+        android:layout_alignTop="@id/product_item_image"
+        android:layout_marginLeft="5dp"
+        android:layout_toLeftOf="@+id/arrow_image"
+        android:layout_toRightOf="@id/product_item_image"
+        android:textColor="#FFA500"
         android:textSize="15sp"
         android:textStyle="bold"
         android:typeface="sans" />
-
+     <TextView
+         android:id="@+id/product_item_price"
+         android:layout_width="fill_parent"
+         android:layout_height="wrap_content"
+         android:layout_below="@id/product_item_name"
+         android:layout_marginLeft="5dp"
+         android:layout_toLeftOf="@id/arrow_image"
+         android:layout_toRightOf="@id/product_item_image"
+         android:gravity="left"
+         android:textColor="#FFA500"
+         android:textSize="12sp"
+         android:textStyle="bold" />
     <TextView
         android:id="@+id/product_item_description"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/product_item_name"
-        android:layout_marginTop="1dp"
-        android:layout_toRightOf="@+id/thumbnail"
+        android:layout_below="@id/product_item_price"
+        android:layout_marginLeft="5dp"
+        android:layout_toLeftOf="@id/arrow_image"
+        android:layout_toRightOf="@+id/product_item_image"
         android:textColor="#343434"
         android:textSize="12sp" />
-
-    <TextView
-        android:id="@+id/product_item_price"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentRight="true"
-        android:layout_alignTop="@id/product_item_name"
-        android:layout_marginRight="5dp"
-        android:gravity="right"
-        android:textColor="#10BCC9"
-        android:textSize="12sp"
-        android:textStyle="bold" />
-
-    <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentRight="true"
-        android:layout_centerVertical="true"
-        android:contentDescription="@string/title_activity_product_detail_name"
-        android:src="@drawable/arrow" />
-
+       <ImageView
+           android:id="@+id/arrow_image"
+           android:layout_width="wrap_content"
+           android:layout_height="fill_parent"
+           android:layout_alignParentRight="true"
+           android:layout_alignTop="@+id/product_item_name"
+           android:contentDescription="@string/title_activity_product_detail_name"
+           android:src="@drawable/arrow" />
 </RelativeLayout>
