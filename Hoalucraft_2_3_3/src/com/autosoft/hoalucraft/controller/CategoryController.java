@@ -1,12 +1,8 @@
 package com.autosoft.hoalucraft.controller;
 
-import java.util.Locale;
-
 import android.app.ProgressDialog;
 import android.content.Intent;
-import android.content.res.Configuration;
 import android.os.AsyncTask;
-import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
@@ -27,8 +23,6 @@ public class CategoryController {
 		super();
 		this.model = new CategoryModel();
 		this.view = view;
-
-		Log.i("Language-------", HoaLuCraftApp.getInstance().getLanguage());
 
 		new CategoryLoadDBAsyncTask().execute();
 
@@ -76,20 +70,16 @@ public class CategoryController {
 	public void reloadByLanguage(MenuItem item) {
 		if (item != null && item.getItemId() == R.id.lang_en && !HoaLuCraftApp.getInstance().getLanguage().equals(HoaLuCraftApp.LANG_EN)) {
 			HoaLuCraftApp.getInstance().setLanguage(HoaLuCraftApp.LANG_EN);
-			// HoaLuCraftApp.configLanguageAndLocate(view.getActivity());
 
 			Intent refresh = new Intent(view.getActivity(), MainActivity.class);
 			view.getActivity().finish();
 			view.getActivity().startActivity(refresh);
-			// new CategoryLoadDBAsyncTask().execute();
 		} else if (item != null && item.getItemId() == R.id.lang_vi && !HoaLuCraftApp.getInstance().getLanguage().equals(HoaLuCraftApp.LANG_VI)) {
 			HoaLuCraftApp.getInstance().setLanguage(HoaLuCraftApp.LANG_VI);
-			// HoaLuCraftApp.configLanguageAndLocate(view.getActivity());
 			Intent refresh = new Intent(view.getActivity(), MainActivity.class);
 
 			view.getActivity().finish();
 			view.getActivity().startActivity(refresh);
-			// new CategoryLoadDBAsyncTask().execute();
 		}
 	}
 
