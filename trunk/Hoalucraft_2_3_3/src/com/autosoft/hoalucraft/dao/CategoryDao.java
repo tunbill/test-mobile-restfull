@@ -8,11 +8,10 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-import android.R.integer;
 import android.annotation.SuppressLint;
+
 import com.autosoft.hoalucraft.HoaLuCraftApp;
 import com.autosoft.hoalucraft.model.Category;
-import com.autosoft.hoalucraft.model.Product;
 
 @SuppressLint("DefaultLocale")
 public class CategoryDao {
@@ -39,6 +38,7 @@ public class CategoryDao {
 
 	@SuppressWarnings("finally")
 	public static List<Category> getByLanguage() {
+
 		String url = HoaLuCraftApp.ROOT_SERVICES + "/category/categories/" + HoaLuCraftApp.getInstance().getLanguage();
 		JSONParser jParser = new JSONParser();
 
@@ -69,6 +69,7 @@ public class CategoryDao {
 
 	@SuppressWarnings("finally")
 	public static List<Category> getByAll() {
+
 		String url = HoaLuCraftApp.ROOT_SERVICES + "/category/categories";
 		JSONParser jParser = new JSONParser();
 
